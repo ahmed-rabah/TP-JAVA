@@ -1,0 +1,183 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/memory/allocation.cpp:46), pid=6740, tid=14940
+#
+# JRE version:  (11.0.2+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.2+9, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 Main
+
+Host: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+Time: Sat May 20 20:30:48 2023 Maroc (heure d’été) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000023110951800):  JavaThread "Unknown thread" [_thread_in_vm, id=14940, stack(0x000000b9f4f00000,0x000000b9f5000000)]
+
+Stack: [0x000000b9f4f00000,0x000000b9f5000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63489a]
+V  [jvm.dll+0x771f9f]
+V  [jvm.dll+0x773648]
+V  [jvm.dll+0x773d03]
+V  [jvm.dll+0x25eba8]
+V  [jvm.dll+0xb9bf4]
+V  [jvm.dll+0x2f7c7d]
+V  [jvm.dll+0x2f2119]
+V  [jvm.dll+0x74b4f7]
+V  [jvm.dll+0x74cc3f]
+V  [jvm.dll+0x372609]
+V  [jvm.dll+0x731b69]
+V  [jvm.dll+0x3e1bad]
+V  [jvm.dll+0x3e3e81]
+C  [javaw.exe+0x3617]
+C  [javaw.exe+0x17a6c]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002310f0728c0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002311096b000 GCTaskThread "GC Thread#0" [stack: 0x000000b9f5000000,0x000000b9f5100000] [id=10392]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9ac71c7c0]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002311094f800] Heap_lock - owner thread: 0x0000023110951800
+
+Heap address: 0x0000000081c00000, size: 2020 MB, Compressed Oops mode: Non-zero based: 0x0000000081c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6fd840000 - 0x00007ff6fd885000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\javaw.exe
+0x00007ffa16d90000 - 0x00007ffa16f88000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa15040000 - 0x00007ffa150ff000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa14760000 - 0x00007ffa14a56000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa166c0000 - 0x00007ffa1685d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa14d30000 - 0x00007ffa14d52000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa152f0000 - 0x00007ffa1531c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa14a60000 - 0x00007ffa14b75000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa144e0000 - 0x00007ffa1457d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa14b80000 - 0x00007ffa14c80000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9f3a30000 - 0x00007ff9f3cca000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffa15d80000 - 0x00007ffa15e1e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa14ea0000 - 0x00007ffa14ed0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa08c80000 - 0x00007ffa08c96000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\vcruntime140.dll
+0x00007ff9ec480000 - 0x00007ff9ec52a000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\msvcp140.dll
+0x00007ff9ac420000 - 0x00007ff9acf43000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\server\jvm.dll
+0x00007ffa14df0000 - 0x00007ffa14e9f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa15100000 - 0x00007ffa1519c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa15380000 - 0x00007ffa154a6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa16590000 - 0x00007ffa16598000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa07a60000 - 0x00007ffa07a69000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa154b0000 - 0x00007ffa1551b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9f2b70000 - 0x00007ff9f2b97000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa09280000 - 0x00007ffa0928a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa12cc0000 - 0x00007ffa12cd2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa0a250000 - 0x00007ffa0a261000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\verify.dll
+0x00007ffa12300000 - 0x00007ffa124e4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9f9e30000 - 0x00007ff9f9e64000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa14d60000 - 0x00007ffa14de2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa06330000 - 0x00007ffa06358000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\java.dll
+0x00007ffa08360000 - 0x00007ffa08376000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\zip.dll
+0x00007ffa07a30000 - 0x00007ffa07a3a000 	C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\POPOO\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: Main
+java_class_path (initial): C:\Users\POPOO\eclipse-workspace\superMarket\bin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2118123520                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830092                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122914074                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122914074                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/POPOO/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835/jre/bin/server;C:/Users/POPOO/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.2.v20200815-0835/jre/bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\app\ahmed\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft VS Code\bin;D:\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\Program Files\python\Scripts\;C:\Program Files\python\;C:\Users\POPOO\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\POPOO\AppData\Roaming\Composer\vendor\bin;C:\Users\POPOO\AppData\Roaming\npm;D:\laragon\bin;D:\laragon\bin\apache\httpd-2.4.47-win64-VS16\bin;D:\laragon\bin\composer;D:\laragon\bin\git\bin;D:\laragon\bin\git\cmd;D:\laragon\bin\git\mingw64\bin;D:\laragon\bin\git\usr\bin;D:\laragon\bin\laragon\utils;D:\laragon\bin\nginx\nginx-1.19.10;D:\laragon\bin\ngrok;D:\laragon\bin\nodejs\node-v14;D:\laragon\bin\notepad++;D:\laragon\bin\redis\redis-x64-3.2.100;D:\laragon\bin\telnet;D:\laragon\usr\bin;C:\Users\POPOO\AppData\Local\Microsoft\WindowsApps;C:\Users\POPOO\AppData\Local\GitHubDesktop\bin;C:\Program Files\php-8.1.5-Win32-vs16-x64;;C:\WINDOWS\system32;
+USERNAME=ahmed
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8072M (1517M free)
+TotalPageFile size 12535M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 48M, peak: 49M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.2+9) for windows-amd64 JRE (11.0.2+9), built on Jan 18 2019 05:23:22 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
